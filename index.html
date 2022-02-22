@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+
+    <!--  STYLES  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Proyecto Coder - Conversor de Divisas</title>
+</head>
+<body>
+    <script src="js/insert.js"></script>
+    <header>
+        <div>
+            <h1 id="title">Conversor de Divisas </h1>    
+        </div>
+    </header>
+
+    <section>
+        <div class="container" id="app">
+        <div class="currency-container">
+        
+                <select class="mySelect1 currency-form first" id="select1">
+                    <!-- SE AGREGA DESDE JS -->    
+                </select>
+
+            <input class="myInput currency-form first" type="text" name="money" id="input1" value="1" min="1">
+        </div>
+
+        <div class="currency-container arrows">
+            <h2>↓</h2>
+            <h2>↑</h2>
+        </div>
+
+        <div class="currency-container">
+            
+                <select class="mySelect2 currency-form" id="select2">
+                    <!-- SE AGREGA DESDE JS -->
+                </select>
+
+            <input class="myInput currency-form" type="text" name="money" id="input2" value="1" min="1">
+        </div>
+
+ 
+
+        <div class="currency-container" >
+            
+                <!-- <button class="pillButton" id="caculateBtn">convertir</button> -->
+                <button class="pillButton" id="keyboardBtn">mostrar teclado</button>
+                <button class="pillButton" id="historyBtn">mostrar historial</button>
+            
+        </div>
+
+
+        <!-- TECLADO VIRTUAL APARECE CON CLICK EN SU BOTON -->
+
+        <div class="keyboard-container">
+                <button class="btn-keyboard" id="btn-1" onclick="insert(1)">1</button>
+                <button class="btn-keyboard" id="btn-2" onclick="insert(2)">2</button>
+                <button class="btn-keyboard" id="btn-3" onclick="insert(3)">3</button>
+                <button class="btn-keyboard" id="btn-4" onclick="insert(4)">4</button>
+                <button class="btn-keyboard" id="btn-5" onclick="insert(5)">5</button>
+                <button class="btn-keyboard" id="btn-6" onclick="insert(6)">6</button>
+                <button class="btn-keyboard" id="btn-7" onclick="insert(7)">7</button>
+                <button class="btn-keyboard" id="btn-8" onclick="insert(8)">8</button>
+                <button class="btn-keyboard" id="btn-9" onclick="insert(9)">9</button>
+                <button class="btn-keyboard" id="btn-0" onclick="insert(0)">0</button>
+                <button class="btn-keyboard" id="btn-dot" onclick="insert('.')">.</button>
+                <button class="btn-keyboard" id="btn-del"  onclick="reset()">DEL</button>
+        </div>
+
+
+        <!-- CREO EL CONTENEDOR PARA LA TABLA DE HISTORIAL -->
+        <div class="history-container">
+            
+        </div>
+
+
+
+    </div>
+    </section>
+    
+    <!-- JQUERY -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- MI SCRIPT -->
+
+    <script src="js/clases/historial.js"></script>
+    <script src="js/welcome.js"></script>
+    <script src="js/mostrarTeclado.js"></script>
+    <script src="js/mostrarHistorial.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
